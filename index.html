@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Smart Art Furnitures and Design | Custom Furniture in Nairobi</title>
+<meta name="description" content="Custom-made mahogany furniture, sofa sets, beds and interior consultations from our workshop in Komarock, Nairobi. Made on order, delivered in 7 days.">
+<link rel="icon" href="images/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#070707;--coal:#14110c;--gold:#c9a24b;--gold-d:#9a7424;--gold-l:#e6cf94;--cream:#f6efe0;--sand:#ebe0c8;--text:#2a2418}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{font-family:'Jost',sans-serif;font-weight:300;line-height:1.7;color:var(--text);background:var(--cream);-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:600;line-height:1.1}
+h2{font-size:clamp(2.1rem,6vw,3.4rem);margin-bottom:1rem}
+h3{font-size:1.6rem}
+.wrap{width:min(1120px,100% - 2.5rem);margin-inline:auto}
+section{padding:clamp(4rem,10vw,7rem) 0}
+.dark{background:var(--ink);color:var(--cream)}
+.dark h2,.dark h3{color:var(--gold-l)}
+.lead{max-width:56ch;font-size:1.08rem}
+.btn{display:inline-block;padding:.95rem 2rem;border:1px solid var(--gold);background:var(--gold);color:var(--ink);font-weight:500;letter-spacing:.06em;text-decoration:none;transition:background .3s,color .3s}
+.btn:hover,.btn:focus-visible{background:transparent;color:var(--gold-l)}
+.btn.ghost{background:transparent;color:var(--gold-l)}
+.btn.ghost:hover{background:var(--gold);color:var(--ink)}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+
+/* header */
+header{position:fixed;inset:0 0 auto 0;z-index:50;background:rgba(7,7,7,.92);backdrop-filter:blur(8px);border-bottom:1px solid rgba(201,162,75,.3)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:700;color:var(--gold-l);text-decoration:none;letter-spacing:.08em}
+.menu{display:none;list-style:none;position:absolute;top:64px;left:0;right:0;background:var(--ink);padding:1rem 1.5rem 1.5rem;border-bottom:1px solid rgba(201,162,75,.3)}
+.menu.open{display:block}
+.menu a{display:block;padding:.7rem 0;color:var(--cream);text-decoration:none;font-size:1.05rem}
+.menu a:hover{color:var(--gold)}
+.burger{background:none;border:0;width:44px;height:44px;cursor:pointer;display:grid;place-content:center;gap:6px}
+.burger span{display:block;width:24px;height:2px;background:var(--gold)}
+@media(min-width:820px){.burger{display:none}.menu{display:flex;position:static;gap:2rem;padding:0;border:0;background:none}.menu a{padding:0;font-size:.95rem}}
+
+/* hero */
+.hero{padding:calc(64px + 3rem) 0 4rem;background:radial-gradient(ellipse at 20% 0%,#2a2010 0%,var(--ink) 60%)}
+.hero .wrap{display:grid;gap:2.5rem;align-items:center}
+.hero img.logo{width:min(250px,60%);mix-blend-mode:screen;margin-bottom:1rem}
+.hero h1{font-size:clamp(2.6rem,9vw,5rem);color:var(--gold-l);margin-bottom:1.2rem}
+.hero p{max-width:46ch;margin-bottom:2rem;color:#e8dfca;font-size:1.1rem}
+.hero .cta{display:flex;flex-wrap:wrap;gap:1rem}
+.frame{position:relative;padding:12px;border:1px solid var(--gold);max-width:420px;justify-self:center}
+.frame img{aspect-ratio:3/4;object-fit:cover;width:100%}
+@media(min-width:820px){.hero .wrap{grid-template-columns:1.15fr .85fr}.hero{padding-top:calc(64px + 4rem)}}
+
+/* about */
+.about .wrap{display:grid;gap:2rem}
+.facts{display:grid;gap:1.2rem;align-content:start}
+.facts div{padding-left:1.2rem;border-left:2px solid var(--gold)}
+.facts b{display:block;font-weight:500;color:var(--gold-d)}
+@media(min-width:820px){.about .wrap{grid-template-columns:1.2fr .8fr;gap:4rem}}
+
+/* collections */
+.grid{display:grid;gap:2.5rem;margin-top:3rem}
+.piece{display:flex;flex-direction:column}
+.piece .ph{border:1px solid rgba(201,162,75,.5);padding:8px;margin-bottom:1.2rem}
+.piece img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.piece p{color:#d9cfb8;margin:.4rem 0 .8rem}
+.price{color:var(--gold);font-weight:500;font-size:1.05rem}
+.meta{font-size:.9rem;color:#b9ad92}
+@media(min-width:700px){.grid{grid-template-columns:1fr 1fr;gap:3rem 2.5rem}}
+
+/* services */
+.services{background:var(--sand)}
+.cards{display:grid;gap:1.5rem;margin-top:2.5rem}
+.card{background:var(--cream);padding:2rem;border-top:3px solid var(--gold)}
+.card p{margin-top:.6rem}
+@media(min-width:820px){.cards{grid-template-columns:repeat(3,1fr)}}
+
+/* process */
+.steps{list-style:none;counter-reset:s;display:grid;gap:2rem;margin-top:3rem}
+.steps li{counter-increment:s;position:relative;padding-left:4rem}
+.steps li::before{content:counter(s);position:absolute;left:0;top:-.3rem;font-family:'Cormorant Garamond',serif;font-size:2.8rem;color:var(--gold)}
+.steps p{color:#d9cfb8}
+@media(min-width:820px){.steps{grid-template-columns:repeat(4,1fr)}}
+
+/* contact */
+.contact .wrap{display:grid;gap:2.5rem}
+.contact address{font-style:normal;display:grid;gap:1.2rem}
+.contact address b{display:block;font-weight:500;color:var(--gold-d)}
+.contact a{text-decoration:none;border-bottom:1px solid var(--gold)}
+.social{display:flex;gap:1rem;margin-top:1.8rem}
+.social a{width:52px;height:52px;border-radius:50%;border:1px solid var(--gold);display:grid;place-content:center;color:var(--gold-d);transition:background .3s,color .3s}
+.social a:hover,.social a:focus-visible{background:var(--gold);color:var(--ink)}
+.social svg{width:24px;height:24px;fill:currentColor}
+.contact img{border:1px solid var(--gold);padding:8px;max-width:420px;justify-self:center}
+@media(min-width:820px){.contact .wrap{grid-template-columns:1fr 1fr;align-items:center}}
+
+footer{background:var(--ink);color:#b9ad92;text-align:center;padding:2rem 1rem;font-size:.9rem}
+footer b{color:var(--gold-l);font-weight:500}
+
+/* floating whatsapp */
+.wa{position:fixed;right:18px;bottom:18px;z-index:60;width:62px;height:62px;border-radius:50%;background:#25d366;display:grid;place-content:center;box-shadow:0 6px 20px rgba(0,0,0,.4);animation:float 3s ease-in-out infinite}
+.wa svg{width:34px;height:34px;fill:#fff}
+.wa::before,.wa::after{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid #25d366;animation:ring 2.4s ease-out infinite}
+.wa::after{animation-delay:1.2s}
+.wa .tip{position:absolute;right:76px;white-space:nowrap;background:var(--ink);color:var(--gold-l);padding:.45rem .9rem;font-size:.85rem;border:1px solid var(--gold);opacity:0;transform:translateX(8px);transition:.3s;pointer-events:none}
+.wa:hover .tip,.wa:focus-visible .tip{opacity:1;transform:none}
+@keyframes ring{0%{transform:scale(1);opacity:.8}100%{transform:scale(1.9);opacity:0}}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+
+/* slow reveal */
+.reveal{opacity:0;transform:translateY(36px);transition:opacity 1.6s ease,transform 1.6s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+.d1{transition-delay:.2s}.d2{transition-delay:.4s}.d3{transition-delay:.6s}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.wa,.wa::before,.wa::after{animation:none}html{scroll-behavior:auto}}
+</style>
+<noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top">SMART ART</a>
+    <button class="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <ul class="menu">
+      <li><a href="#about">About</a></li>
+      <li><a href="#collections">Collections</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#process">How we work</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="wrap">
+    <div class="reveal">
+      <img class="logo" src="images/logo.jpg" alt="Smart Art Furnitures and Design logo">
+      <h1>Furniture made for your room, by hand.</h1>
+      <p>Custom mahogany sofas, beds and statement pieces from our Nairobi workshop. Contemporary design, built with African craftsmanship.</p>
+      <div class="cta">
+        <a class="btn" href="https://wa.me/254722515359?text=Hello%20Smart%20Art%2C%20I%27d%20like%20to%20order%20a%20custom%20piece." target="_blank" rel="noopener">Order on WhatsApp</a>
+        <a class="btn ghost" href="#collections">View collections</a>
+      </div>
+    </div>
+    <div class="frame reveal d2"><img src="images/console.jpg" alt="Hand-carved solid mahogany console table with matching mirror"></div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap">
+    <div class="reveal">
+      <h2>A workshop and design studio in Komarock</h2>
+      <p class="lead">Smart Art Furnitures and Design is a custom furniture workshop and interior design brand in Nairobi. We combine contemporary modern styles with premium African craftsmanship, making tailored pieces for homes, offices and short-stay rentals.</p>
+      <p class="lead" style="margin-top:1rem">Every piece is made on order, so the size, fabric and finish fit your space.</p>
+    </div>
+    <div class="facts reveal d2">
+      <div><b>Material</b>Solid mahogany and quality upholstery</div>
+      <div><b>Made on order</b>Delivered in 7 days</div>
+      <div><b>Workshop</b>Komarock Market, Nairobi</div>
+    </div>
+  </div>
+</section>
+
+<section class="dark" id="collections">
+  <div class="wrap">
+    <div class="reveal">
+      <h2>Featured collections</h2>
+      <p class="lead">A selection of recent work. Prices are starting guides, and every piece can be resized or re-upholstered.</p>
+    </div>
+    <div class="grid">
+      <article class="piece reveal">
+        <div class="ph"><img src="images/wingback.jpg" alt="Luxury wingback chair in cream linen with mahogany side table" loading="lazy"></div>
+        <h3>Luxury Wingback Chair + Side Table</h3>
+        <p>Pure mahogany with cream linen. An elegant living room set, ideal for Airbnbs and modern homes.</p>
+        <span class="price">KSh 85,000 chair &nbsp;|&nbsp; KSh 110,000 full set</span>
+        <span class="meta">Negotiable to 80K. 50% deposit.</span>
+      </article>
+      <article class="piece reveal d1">
+        <div class="ph"><img src="images/triangle-set.jpg" alt="Triangle luxury set with two cream velvet chairs and a glass triangle table" loading="lazy"></div>
+        <h3>Triangle Luxury Set</h3>
+        <p>Two cream velvet chairs with a triangle glass table, framed in pure mahogany.</p>
+        <span class="price">KSh 110,000</span>
+        <span class="meta">Deposit KSh 40,000.</span>
+      </article>
+      <article class="piece reveal">
+        <div class="ph"><img src="images/classic-seats.jpg" alt="Modern classic seats with polished mahogany frames and grey upholstery" loading="lazy"></div>
+        <h3>Modern Classic Seats</h3>
+        <p>Polished wood frames with studded, upholstered backs. Choose your fabric and finish.</p>
+        <span class="price">Price on request</span>
+      </article>
+      <article class="piece reveal d1">
+        <div class="ph"><img src="images/console.jpg" alt="Detail console table and mirror, hand carved from solid mahogany" loading="lazy" style="object-position:center 40%"></div>
+        <h3>The Detail Console Table and Mirror</h3>
+        <p>Hand carved from solid mahogany. A sculptural statement for any entrance or hallway.</p>
+        <span class="price">Price on request</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="reveal"><h2>What we make</h2></div>
+    <div class="cards">
+      <div class="card reveal"><h3>Modern African sofa sets</h3><p>Contemporary living room seating built for durability and lasting comfort.</p></div>
+      <div class="card reveal d1"><h3>Modern African beds</h3><p>Sleek, geometric frames with the strength of traditional hardwood.</p></div>
+      <div class="card reveal d2"><h3>Interior space consultations</h3><p>Advice on layouts, fabric selection and custom sizing to suit your room.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="dark" id="process">
+  <div class="wrap">
+    <div class="reveal"><h2>How ordering works</h2></div>
+    <ol class="steps">
+      <li class="reveal"><h3>Tell us what you need</h3><p>Message us on WhatsApp with your room size and the style you like.</p></li>
+      <li class="reveal d1"><h3>Agree the design</h3><p>We confirm the fabric, finish and price with you.</p></li>
+      <li class="reveal d2"><h3>Pay a deposit</h3><p>A deposit (usually 50%) starts your order in the workshop.</p></li>
+      <li class="reveal d3"><h3>Delivery in 7 days</h3><p>Your piece is finished, checked and delivered.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="reveal">
+      <h2>Visit or contact us</h2>
+      <address>
+        <div><b>Workshop</b>Komarock Market, Sector One, along Kangaru Road, behind Naivas, Nairobi</div>
+        <div><b>Call or WhatsApp</b><a href="tel:+254722515359">+254 722 515359</a><br><a href="tel:+254722824703">+254 722 824703</a></div>
+        <div><b>Email</b><a href="mailto:poduor28@gmail.com">poduor28@gmail.com</a></div>
+        <div><b>Hours</b>Always open</div>
+      </address>
+      <div class="social">
+        <a href="https://www.facebook.com/Smartartfurnituresanddesigners" target="_blank" rel="noopener" aria-label="Smart Art on Facebook"><svg viewBox="0 0 24 24"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.68.24 2.68.24v2.97h-1.51c-1.49 0-1.96.93-1.96 1.89v2.26h3.33l-.53 3.49h-2.8V24C19.61 23.1 24 18.1 24 12.07z"/></svg></a>
+        <a href="https://www.instagram.com/smart_art_furniture_and_design?stkn=N2Z4YTkxOGZxZmRn" target="_blank" rel="noopener" aria-label="Smart Art on Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 3.25.15 4.77 1.69 4.92 4.92.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.15 3.23-1.66 4.77-4.92 4.92-1.27.06-1.64.07-4.85.07s-3.58-.01-4.85-.07c-3.26-.15-4.77-1.7-4.92-4.92C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85C2.38 3.92 3.9 2.38 7.15 2.23 8.42 2.17 8.8 2.16 12 2.16zM12 0C8.74 0 8.33.01 7.05.07 2.7.27.27 2.69.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.2 4.36 2.62 6.78 6.98 6.98C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c4.35-.2 6.78-2.62 6.98-6.98.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.2-4.35-2.62-6.78-6.98-6.98C15.67.01 15.26 0 12 0zm0 5.84a6.16 6.16 0 100 12.32 6.16 6.16 0 000-12.32zM12 16a4 4 0 110-8 4 4 0 010 8zm6.4-11.85a1.44 1.44 0 100 2.88 1.44 1.44 0 000-2.88z"/></svg></a>
+      </div>
+    </div>
+    <img class="reveal d2" src="images/triangle-set.jpg" alt="Triangle luxury set in a finished living room" loading="lazy">
+  </div>
+</section>
+</main>
+
+<footer><b>Smart Art Furnitures and Design</b><br>Komarock Market, Nairobi, Kenya &nbsp;|&nbsp; &copy; <span id="yr">2026</span></footer>
+
+<a class="wa" href="https://wa.me/254722515359?text=Hello%20Smart%20Art%2C%20I%27d%20like%20to%20make%20an%20enquiry." target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp">
+  <span class="tip">Chat on WhatsApp</span>
+  <svg viewBox="0 0 24 24"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.22 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.08 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35zM12.05 21.8h-.01a9.9 9.9 0 01-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 01-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88a9.82 9.82 0 016.99 2.9 9.82 9.82 0 012.89 6.99c0 5.45-4.44 9.88-9.88 9.88zM20.52 3.45A11.8 11.8 0 0012.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 005.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.89 0-3.18-1.24-6.16-3.42-8.46z"/></svg>
+</a>
+
+<script>
+const b=document.querySelector('.burger'),m=document.querySelector('.menu');
+b.addEventListener('click',()=>{const o=m.classList.toggle('open');b.setAttribute('aria-expanded',o)});
+m.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{m.classList.remove('open');b.setAttribute('aria-expanded',false)}));
+document.getElementById('yr').textContent=new Date().getFullYear();
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.15});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
